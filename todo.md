@@ -330,3 +330,19 @@ Priority order:
 The **Reflection Coach API** should be next because it directly supports the project's core objective of self-reflection rather than just emotion classification.
 
 Let's ship that next. 🔥
+
+
+
+Why This Matters
+
+When your supervisor asks:
+
+"How is this different from normal sentiment analysis?"
+
+Your answer becomes:
+
+The system does not only classify emotions.
+
+It tracks recurring emotional and relationship
+patterns across multiple reflections and generates
+longitudinal relationship insights for the user.
