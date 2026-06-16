@@ -1,3 +1,6 @@
 ai-service/datasets/training.1600000.processed.noemoticon.csv
+ai-service/datasets/emotion_sentimen_dataset.csv
+ai-service/datasets/text.csv
+ai-service/datasets/dictionary.csv
 ai-service/datasets/*.zip
 ai-service/datasets/*.rar
