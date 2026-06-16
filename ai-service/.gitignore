@@ -1,3 +1,6 @@
 datasets/training.1600000.processed.noemoticon.csv
+datasets/emotion_sentimen_dataset.csv
+datasets/text.csv
+datasets/dictionary.csv
 datasets/*.zip
 datasets/*.rar
