@@ -1,1 +1,3 @@
 ai-service/datasets/training.1600000.processed.noemoticon.csv
+ai-service/datasets/*.zip
+ai-service/datasets/*.rar
