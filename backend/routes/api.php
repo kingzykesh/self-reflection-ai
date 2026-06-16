@@ -10,6 +10,7 @@ use App\Http\Controllers\Api\CoachController;
 use App\Http\Controllers\Api\RelationshipInsightController;
 use App\Http\Controllers\Api\GrowthTrackingController;
 use App\Http\Controllers\Api\ReportController;
+use App\Http\Controllers\Api\TimelineController;
 
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
@@ -33,6 +34,11 @@ Route::get('/emotional-growth', [GrowthTrackingController::class, 'growth'])
 
 Route::get('/reflection-report', [ReportController::class, 'generate'])
     ->middleware('auth:sanctum');
+
+Route::get(
+    '/reflection-timeline',
+    [TimelineController::class, 'index']
+)->middleware('auth:sanctum');
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/me', [AuthController::class, 'me']);

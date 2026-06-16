@@ -12,7 +12,8 @@ class DashboardController extends Controller
 {
     public function summary(Request $request)
     {
-        $userId = $request->user()->id;
+        $user = $request->user();
+        $userId = $user->id;
 
         $totalReflections = Reflection::where('user_id', $userId)->count();
 
@@ -37,14 +38,45 @@ class DashboardController extends Controller
             ->orderByDesc('total')
             ->first();
 
+        $streak = $this->calculateStreak($userId);
+
         return response()->json([
             'status' => true,
             'data' => [
                 'total_reflections' => $totalReflections,
                 'dominant_emotion' => $dominantEmotion?->emotion,
                 'common_pattern' => $commonPattern?->pattern_detected,
+                'streak' => $streak,
                 'latest_reflection' => $latestReflection,
             ],
         ]);
+    }
+
+    private function calculateStreak($userId)
+    {
+        $dates = Reflection::where('user_id', $userId)
+            ->orderBy('created_at', 'desc')
+            ->pluck('created_at')
+            ->map(fn ($date) => $date->format('Y-m-d'))
+            ->unique()
+            ->values();
+
+        if ($dates->isEmpty()) {
+            return 0;
+        }
+
+        $streak = 0;
+        $current = now()->startOfDay();
+
+        if (!$dates->contains($current->format('Y-m-d'))) {
+            $current->subDay();
+        }
+
+        while ($dates->contains($current->format('Y-m-d'))) {
+            $streak++;
+            $current->subDay();
+        }
+
+        return $streak;
     }
 }

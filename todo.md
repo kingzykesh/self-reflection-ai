@@ -346,3 +346,236 @@ The system does not only classify emotions.
 It tracks recurring emotional and relationship
 patterns across multiple reflections and generates
 longitudinal relationship insights for the user.
+
+
+######
+Next Ship Order
+1. Reflection Details Page
+2. Reflection Coach UI
+3. Reports Page
+4. Settings Page
+5. Mobile Responsiveness
+6. Deployment
+
+
+-------------------
+Excellent. At this stage, I'd stop adding random pages and focus on the **final 20% that gives 80% of the value**.
+
+# Remaining Roadmap
+
+## Phase 1 — Mobile Navigation (Next)
+
+Replace the desktop-only sidebar with:
+
+```txt
+Desktop
+├── Sidebar
+
+Mobile
+├── Top Header
+└── Bottom Navigation
+    ├── Home
+    ├── Reflect
+    ├── History
+    ├── Analytics
+    └── Settings
+```
+
+This immediately makes the project feel production-ready.
+
+---
+
+## Phase 2 — Reflection Timeline ⭐
+
+This is the strongest remaining academic feature.
+
+Page:
+
+```txt
+/dashboard/timeline
+```
+
+Shows:
+
+```txt
+12 Jun
+Fear
+↓
+
+15 Jun
+Fear
+↓
+
+18 Jun
+Sadness
+↓
+
+21 Jun
+Happy
+↓
+
+25 Jun
+Happy
+```
+
+And:
+
+```txt
+Recurring Pattern:
+Fear of Abandonment
+67%
+```
+
+This demonstrates:
+
+* Temporal Analysis
+* Behavioral Pattern Tracking
+* Emotional Evolution
+
+These are powerful phrases during defense.
+
+---
+
+## Phase 3 — Better AI Insights
+
+Current:
+
+```txt
+Emotion
+Pattern
+Insight
+```
+
+Upgrade to:
+
+```txt
+Emotion
+Pattern
+Relationship Insight
+Coach Questions
+Recommended Next Step
+```
+
+Example:
+
+```txt
+Recommended Next Step:
+
+Reach out to one trusted person and communicate
+one concern directly rather than assuming the outcome.
+```
+
+---
+
+## Phase 4 — Empty States & Skeletons
+
+Instead of:
+
+```txt
+Loading...
+```
+
+Use:
+
+```txt
+Settling into your reflections...
+```
+
+Instead of:
+
+```txt
+No reflections
+```
+
+Use:
+
+```txt
+Your story begins with one honest sentence.
+```
+
+This matches the "quiet room at 2am" design vision.
+
+---
+
+## Phase 5 — Deployment
+
+### Backend
+
+```txt
+api.yourdomain.com
+```
+
+HostBeak Laravel Subdomain
+
+### Frontend
+
+```txt
+app.yourdomain.com
+```
+
+Vercel
+
+### AI
+
+```txt
+Render
+```
+
+### DB
+
+```txt
+HostBeak MySQL
+```
+
+---
+
+## Phase 6 — Final Year Documentation
+
+Add screenshots for:
+
+1. Landing Page
+2. Login
+3. Dashboard
+4. Reflection Submission
+5. Emotion Detection
+6. Reflection Coach
+7. Analytics
+8. Timeline
+9. PDF Report
+
+Then Chapter 4 becomes very easy.
+
+---
+
+# What I Would Ship Next
+
+Not deployment.
+
+Not more settings.
+
+**Reflection Timeline**.
+
+Because it is:
+
+* academically valuable,
+* visually impressive,
+* easy to demo,
+* directly aligned with the project title.
+
+So next engineering sprint:
+
+```txt
+Sprint 1
+✅ Mobile Navigation
+
+Sprint 2
+✅ Reflection Timeline
+
+Sprint 3
+✅ Deployment
+
+Sprint 4
+✅ Documentation
+```
+
+The project is now very close to MVP-complete. The timeline feature is the last major capability I'd add before moving into deployment and documentation. 🚀
