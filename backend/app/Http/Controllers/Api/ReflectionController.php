@@ -37,7 +37,7 @@ class ReflectionController extends Controller
         ]);
 
         try {
-            $response = Http::timeout(15)->post('http://127.0.0.1:8001/analyze', [
+           $response = Http::timeout(30)->post(env('AI_SERVICE_URL') . '/analyze', [
                 'text' => $validated['reflection_text'],
             ]);
 
