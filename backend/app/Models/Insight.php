@@ -13,6 +13,9 @@ class Insight extends Model
         'reflection_id',
         'pattern_detected',
         'generated_insight',
+        'coach_question',
+        'recommended_action',
+        'encouragement',
     ];
 
     public function reflection()

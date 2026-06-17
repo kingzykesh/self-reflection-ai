@@ -58,12 +58,14 @@ class ReflectionController extends Controller
                 'sentiment' => $aiResult['sentiment'] ?? 'neutral',
             ]);
 
-            $insight = Insight::create([
-                'reflection_id' => $reflection->id,
-                'pattern_detected' => $aiResult['pattern_detected'] ?? 'general self-reflection',
-                'generated_insight' => $aiResult['generated_insight'] ?? 'Your reflection has been received. Keep reflecting intentionally.',
-            ]);
-
+          $insight = Insight::create([
+    'reflection_id' => $reflection->id,
+    'pattern_detected' => $aiResult['pattern_detected'] ?? 'general self-reflection',
+    'generated_insight' => $aiResult['generated_insight'] ?? 'Your reflection has been received. Keep reflecting intentionally.',
+    'coach_question' => $aiResult['coach_question'] ?? null,
+    'recommended_action' => $aiResult['recommended_action'] ?? null,
+    'encouragement' => $aiResult['encouragement'] ?? null,
+]);
             return response()->json([
                 'status' => true,
                 'message' => 'Reflection analyzed successfully',
